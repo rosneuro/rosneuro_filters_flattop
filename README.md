@@ -1,6 +1,6 @@
-# ROSNeuro Flattop window
+# ROS-Neuro Flattop window
 
-This ROSNeuro filter plugin applies a Flattop window to the provided data.
+This ROS-Neuro filter plugin applies a Flattop window to the provided data.
 
 ## Algorithm:
 The filter applies the Flattop window to the data. The Flattop window is implemented as follows:
