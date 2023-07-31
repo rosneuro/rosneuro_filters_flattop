@@ -2,12 +2,12 @@
 #define ROSNEURO_FILTERS_FLATTOP_HPP
 
 #include <Eigen/Dense>
-#include <rosneuro_filters/Filter.hpp>
+#include <rosneuro_filters/Window.hpp>
   
 namespace rosneuro {
 
 template <typename T>
-class Flattop : public Filter<T> {
+class Flattop : public Window<T> {
 	
 	public:
 		Flattop(void);
@@ -21,9 +21,7 @@ class Flattop : public Filter<T> {
 
 	private:
 		int nsamples_;
-		bool is_window_set_;
 		Eigen::Matrix<T, Eigen::Dynamic, 1> window_;
-		T wnorm_;
 
 		static constexpr double A0 = 0.215578950;
     	static constexpr double A1 = 0.416631580;
