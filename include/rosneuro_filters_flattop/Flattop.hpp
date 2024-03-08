@@ -29,7 +29,12 @@ class Flattop : public Filter<T> {
     	static constexpr double A1 = 0.416631580;
     	static constexpr double A2 = 0.277263158;
     	static constexpr double A3 = 0.083578947;
-    	static constexpr double A4 = 0.006947368;		
+    	static constexpr double A4 = 0.006947368;
+
+        FRIEND_TEST(FlattopTestSuite, Constructor);
+        FRIEND_TEST(FlattopTestSuite, ApplyWithValidWindow);
+        FRIEND_TEST(FlattopTestSuite, CreateWindowWithValidSamples);
+        FRIEND_TEST(FlattopTestSuite, CreateWindowWithInvalidSamples);
 		
 };
 
