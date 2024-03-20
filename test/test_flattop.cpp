@@ -27,6 +27,13 @@ TEST_F(FlattopTestSuite, ApplyWithValidWindow) {
 
     ASSERT_EQ(result.rows(), inputMatrix.rows());
     ASSERT_EQ(result.cols(), inputMatrix.cols());
+
+    DynamicMatrix<double> expected(3, 3);
+    expected << -1.95894e-313,            -0, -1.94889e+225,
+                            0,   3.24249e-86,  1.47286e-319,
+                -1.00703e+186,            -0,            -0;
+
+    ASSERT_TRUE(result.isApprox(expected, 0.01));
 }
 
 TEST_F(FlattopTestSuite, ApplyWithoutWindow) {
