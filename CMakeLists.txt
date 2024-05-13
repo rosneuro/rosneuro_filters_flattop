@@ -48,7 +48,7 @@ catkin_package(
 # Build
 ##############################################################################
 
-catkin_add_gtest(TestFlatTop test/test_flattop.cpp)
+catkin_add_gtest(TestFlatTop test/TestFlattop.cpp)
 target_link_libraries(TestFlatTop ${GTEST_BOTH_LIBRARIES} pthread gmock ${Eigen3_LIBRARIES})
 target_link_libraries(TestFlatTop ${PROJECT_NAME} ${catkin_LIBRARIES})
 include_directories(${GTEST_INCLUDE_DIRS} gmock pthread include include/${PROJECT_NAME}/)
@@ -67,7 +67,7 @@ target_link_libraries(${PROJECT_NAME} ${Eigen3_LIBRARIES}
 ## Executables ##
 #################
 
-add_executable(flattop_window test/flattop_window.cpp)
+add_executable(flattop_window example/flattop_window.cpp)
 target_link_libraries(flattop_window ${PROJECT_NAME} ${catkin_LIBRARIES}) 
 
 
